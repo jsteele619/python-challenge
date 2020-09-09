@@ -56,10 +56,10 @@ print("Greatest Increase in Profits:", datelist, max(changelist))
 print("Greatest Decrease in Profits:", datelist2, min(changelist))
 
 
-# In[13]:
+# In[7]:
 
 
-f = open("final.txt","a+")
+f = open("Analysis/final.txt","a+")
 f.write("\nHere are my solutions!\n")
 f.write("Total Months: ")
 f.write(str(len(budget_months)))         

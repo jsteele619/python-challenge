@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[79]:
+# In[4]:
 
 
 import pandas as pd
@@ -9,7 +9,7 @@ data_file = ("resources/election_data.csv")
 election = pd.read_csv(data_file)
 
 
-# In[80]:
+# In[5]:
 
 
 candidates = election[["Candidate"]]
@@ -17,14 +17,14 @@ candidates = election[["Candidate"]]
 candidates_vote = (election["Candidate"].unique())
 
 
-# In[81]:
+# In[6]:
 
 
 candidates_values = candidates.value_counts()
 candidates_sum = pd.DataFrame({"Number of Votes": candidates_values, "Percentage": candidates_values/len(candidates)})
 
 
-# In[82]:
+# In[7]:
 
 
 print("The number of voters this year is", len(candidates)) 
@@ -34,10 +34,10 @@ print(candidates_sum)
 print("The winner is Khan")
 
 
-# In[100]:
+# In[9]:
 
 
-f = open("final.txt","a+")
+f = open("Analysis/final.txt","a+")
 f.write("\nThe number of voters this year are ")
 f.write(str(len(candidates)))
 f.write("\nThe candidates this year are") 
